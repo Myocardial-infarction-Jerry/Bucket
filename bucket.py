@@ -14,7 +14,7 @@ class Peer:
         self.pingList = [TIMEOUT]
         self.socketList = ["127.0.0.1:11451"]
         request = broadcast_pb2.broadcastRequest(
-            token=self.token, socket=neighSocket, depth=neighDepth-1)
+            token=self.token, socket=self.socket, depth=neighDepth-1)
         result = broadcast(request, "")
         success, message = result.success, result.message
         if not success:
