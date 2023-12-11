@@ -1,8 +1,0 @@
-{
-    "token": "ChefMichelin",
-    "defaultList": [
-        "localhost:11451"
-    ],
-    "timeout": 100,
-    "maxDepth": 6
-}

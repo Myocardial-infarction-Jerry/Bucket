@@ -1,0 +1,27 @@
+syntax = "proto3";
+
+message objectInfo {
+    string token = 1;
+    string socket = 2;
+}
+
+message findReply {
+    bool suc = 1;
+    repeated string socket = 2;
+}
+
+service Routing {
+    rpc objectFind(objectInfo) returns (findReply) {}
+    rpc userLogin(objectInfo) returns (findReply) {}
+    rpc userLogoff(objectInfo) returns (findReply) {}
+    rpc joinRoom(objectInfo) returns (findReply) {}
+    rpc leaveRoom(objectInfo) returns (findReply) {}
+}
+
+message chatMessage {
+    string message = 1;
+}
+
+service chat {
+    rpc send(chatMessage) returns (findReply) {}
+}
